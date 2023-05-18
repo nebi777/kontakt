@@ -6,11 +6,6 @@
     text-decoration: none;
 }
 /* javascript */
-.carditems{
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
 nav{
     width: 100%;
     display: flex;
@@ -156,7 +151,19 @@ nav{
 .basket{
     display: flex;
     margin: 20px 0;
+    position: relative;
     transform: translateX(-35px);
+}
+.basket #counter {
+    width: 11px;
+    height: 16px;
+    z-index: 999999;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 8.5px;
+    top: -8px;
+    color: red;
 }
 .basket iconify-icon{
    font-size: 24px;
@@ -358,19 +365,12 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     position: absolute;
-
 }
 .div-3-i{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin-top: 60px;
-}
-.div-3-i a i{
-    font-size: 24px;
-    color: #e3e3e3;
-
-    padding-top: 70px;
 }
 .div-3-i img{
     width: 170px;
@@ -1386,4 +1386,93 @@ input:focus{
     margin-bottom: 50px;
     margin-top: 20px;
 }
-}                     
+}  
+
+
+
+
+/* javascript kaorusel */
+
+.carditems{
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 71%;
+}
+.card-controller{
+    height: 100%;
+}
+.card-carousel{
+    width: 255px;
+    position: relative;
+    height: 100%;
+}
+.card-controller{
+    position: relative;
+    width: 100%;
+    bottom: 15%;
+}
+.card-controller button{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+}
+.card-controller button i{
+    font-size: 24px;
+    color: #e3e3e3;
+}
+.card-controller button:hover{
+    cursor: pointer;
+}
+.card-controller button:first-child{
+    left: 10px;
+}
+
+.card-controller button:last-child{
+    right: 10px;
+}
+
+.div-3{
+    width: 255px;
+}
+/* popup */
+.popup{
+    display: none;
+    width: 60%;
+    height: 550px;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    border: 1px solid black;
+    border-radius: 8px;
+    z-index: 99999999;
+    background-color: white;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+.modal-header h2{
+    margin-left: 50px;
+}
+.modal-header button{
+    margin-right: 50px;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #cf2e2e;
+    font-size: 20px;
+}
+.modal-body{
+    height: 60%;
+    overflow-y: scroll;
+}
+.modal-footer{
+    border-top: 2px solid rgb(211, 204, 204);
+    height: 30%;
+}
